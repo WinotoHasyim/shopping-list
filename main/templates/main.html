@@ -63,8 +63,6 @@
 
     <h5>Sesi terakhir login: {{ last_login }}</h5>
 
-{% endblock content %}
-
 <script>
     async function getProducts() {
         return fetch("{% url 'main:get_product_json' %}").then((res) => res.json())
@@ -102,3 +100,5 @@
     refreshProducts()
     document.getElementById("button_add").onclick = addProduct
 </script>
+
+{% endblock content %}
